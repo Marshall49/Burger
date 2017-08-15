@@ -124,13 +124,13 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
 #### View setup
 
-1. Inside your `burger` directory, create a folder named `views`.
+<!-- 1. Inside your `burger` directory, create a folder named `views`.
 
-   * Create the `index.handlebars` file inside `views` directory.
+   * Create the `index.handlebars` file inside `views` directory. -->
 
-   * Create the `layouts` directory inside `views` directory.
+   <!-- * Create the `layouts` directory inside `views` directory.
 
-     * Create the `main.handlebars` file inside `layouts` directory.
+     * Create the `main.handlebars` file inside `layouts` directory. -->
 
      * Setup the `main.handlebars` file so it's able to be used by Handlebars.
 
