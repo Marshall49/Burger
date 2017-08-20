@@ -1,2 +1,16 @@
-var orm = require("../config/orm.js");
-var burger = require("../models/burger.js");
+module.exports = function(sequelize, DataTypes) {
+var Burger = sequelize.define("Burger", {
+  burger_name: DataTypes.STRING,
+  devoured: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
+  }
+}, {
+  classMethods: {
+    associate: function(burgers) {
+    }
+  }
+});
+return Burger;
+
+};
