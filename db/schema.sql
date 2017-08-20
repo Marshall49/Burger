@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS burgers_db;
-USE burgers_db;
+CREATE DATABASE IF NOT EXISTS burgers_DB;
+USE burgers_DB;
 
 
 DROP TABLE IF EXISTS burgers;

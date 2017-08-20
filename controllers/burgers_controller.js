@@ -19,21 +19,31 @@ router.get("/burgers", function(req, res) {
 
 
 router.post("/burgers/create", function(req, res) {
+  var newburger = req.body;
 
-  burger.create(req.body.burger_name, function(result) {
-
-    console.log(result);
-    res.redirect("/");
+  db.Burger.create({
+    burger_name: newburger.burger_name,
+    devoured: newburger.devoured
+  }).then(function(newburger) {
+    res.json(newburger);
   });
 });
 
 
 router.put("/burgers/update", function(req, res) {
-  burger.update(req.body.burger_id, function(result) {
+  var update = req.body;
 
-    console.log(result);
-    res.redirect("/");
+    db.Burger.update({
+      burger_name: update.burger_name,
+      devoured: update.devoured
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(updateburger) {
+      res.json(updateburger);
   });
 });
+
 
 module.exports = router;
