@@ -4,16 +4,16 @@ var router = express.Router();
 var db = require("../models/");
 
 router.get("/", function(req, res) {
-  res.redirect("/burgers");
+  res.redirect("/");
 });
 
 router.get("/burgers", function(req, res) {
 
-  db.Burger.findAll().then(function(burgerData) {
-    console.log(burgerdata);
-    var burgerData = {burger: burgerData}
+  db.Burger.findAll().then(function(data) {
+    console.log(data);
+    var burgerData = {burger: data}
 
-    res.render("index", { burger_data: burgerData });
+    res.render("index", { burger: data });
   });
 });
 

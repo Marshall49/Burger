@@ -21,6 +21,8 @@ app.use(methodOverride("_method"));
 
 var routes = require("./controllers/burgers_controller.js");
 
+var db = require("./models");
+
 app.use("/", routes);
 app.use("/update", routes);
 app.use("/create", routes);
